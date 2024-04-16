@@ -20,3 +20,16 @@ drawbacks of props
 
   props drilling
   app --> content --> subContnet *
+
+  virtual dom
+
+react js creaete clone of original dom calls it virtual dom
+virtl dom is a lightweight copy of original dom
+virtaul dom have state of original dom
+
+if we make any changes in virtual dom, react js will compare virtual dom with original dom
+
+hook: react built in functions
+useState : it use to create state in functional component
+
+

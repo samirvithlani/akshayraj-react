@@ -1,0 +1,22 @@
+pass data from 1 component to another in react js
+there are 3 ways to pass data from 1 component to another in react js
+
+1. props
+2. context
+3. redux
+
+1. props
+  props is the simplest way to pass data from 1 component to another in react js
+  props is a special keyword in react js which stands for properties
+  every component in react js has a props object
+  props object contains all the properties passed to the component
+  props are read only / immutable
+
+
+drawbacks of props
+  1. props are read only
+  2. props can only pass data from parent to child component
+  3. if we have to pass data from child to parent component, we have to use callback functions
+
+  props drilling
+  app --> content --> subContnet *

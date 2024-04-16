@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { HomeComponent } from "./components/HomeComponent";
+import HeaderComponent from "./components/HeaderComponent";
+import { MapDemo } from "./components/MapDemo";
+import { Content } from "./components/Content";
 
 function App() {
+
+  var title = "REACT APP"
+  var style = {
+    color: "red",
+    fontSize: "20px"
+  }
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <HeaderComponent title = {title}></HeaderComponent>
+     <Content t = {title} s = {style}></Content>
+      {/* <HomeComponent></HomeComponent> */}
+      {/* <MapDemo></MapDemo> */}
     </div>
   );
 }

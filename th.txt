@@ -33,3 +33,4 @@ hook: react built in functions
 useState : it use to create state in functional component
 
 
+app --> users [array {id,name age}] -->child -->userList --> props.users.map

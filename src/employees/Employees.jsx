@@ -21,6 +21,14 @@ export const Employees = () => {
         }
     ])
 
+
+    const addEmploye = (emp)=>{
+
+        employees = [...employees,emp]
+        setemployees(employees)
+
+    }
+
     const deleteEmployee = (id)=>{ //2
 
         employees  = employees.filter((emp)=>{
@@ -43,7 +51,7 @@ export const Employees = () => {
   return (
     <div>
             <h1>EMPLOYEE COMPONENET</h1>
-            <EmployeeList employees = {employees} deleteEmployee = {deleteEmployee}></EmployeeList>
+            <EmployeeList employees = {employees} deleteEmployee = {deleteEmployee} addEmployee = {addEmploye}></EmployeeList>
     </div>
   )
 }

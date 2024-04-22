@@ -1,9 +1,12 @@
 import React from 'react'
 
 export const EmployeeList = (props) => {
-    //props {employees:[{}],deleteEmployee:()=>{}}
+    //props {employees:[{}],deleteEmployee:()=>{},addEmploye:()=>{}}
   return (
     <div>
+        <button className='btn btn-primary' onClick={()=>{
+            props.addEmployee({id:4,name:'Raj',age:25})
+        }}>ADD EMPLOYEE</button>
         <table className='table table-dark'>
             <thead>
                 <tr>

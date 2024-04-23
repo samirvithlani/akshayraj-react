@@ -2,8 +2,22 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 export const Home = () => {
+  var data = [
+    {
+      id: 5,
+      name:"Home 5"
+    },
+    {
+      id: 6,
+      name:"Home 6"
+    },
+    {
+      id: 7,
+      name:"Home 7"
+    }
+  ]
   return (
-    <div  style={{backgroundColor:"grey",height:"200px",marginTop:"10px"}}>
+    <div>
         <h1>HOME COMPONENT</h1>
         <ul>
           <li>
@@ -18,6 +32,18 @@ export const Home = () => {
           <li>
             <Link to="/home/detail/samirvithlani">HOME 3</Link>
           </li>
+        </ul>
+
+<ul>
+        {
+          data.map((d)=>{
+            return(
+              <li>
+                <Link to={`/home/detail/${d.id}`}>{d.name}</Link>
+              </li>
+            )
+          })
+        }
         </ul>
     </div>
   )

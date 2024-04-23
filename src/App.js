@@ -13,6 +13,7 @@ import { Navbar } from "./Navbar";
 import { Home } from "./students/Home";
 import { Commerce } from "./students/Commerce";
 import { Science } from "./students/Science";
+import { HomeDetail } from "./students/HomeDetail";
 
 function App() {
   var title = "REACT APP";
@@ -30,6 +31,8 @@ function App() {
         <Route path="/home" element={<Home />}></Route>
         <Route path="/students/commerce" element={<Commerce />}></Route>
         <Route path="/science" element={<Science />}></Route>
+        <Route path = "/home/detail/:id" element = {<HomeDetail/>}></Route>
+        {/* :id is wild card */}
       </Routes>
     </div>
   );

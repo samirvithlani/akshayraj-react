@@ -60,3 +60,10 @@ handleSubmit(cb){
 }
 
 handleSubmit(submitHandler)
+
+
+npm install react-hook-form
+forms -->folder --> component FormHandling1
+
+routes register
+navbar link

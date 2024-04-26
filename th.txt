@@ -42,3 +42,21 @@ index.js
 
 </BrowserRouter>
 <Routes>
+
+
+handleSubmit(cb){
+
+  //inputs -->manager
+  //object
+  {
+
+    name:"",
+    email:"
+  }
+
+  cb(object)
+
+
+}
+
+handleSubmit(submitHandler)

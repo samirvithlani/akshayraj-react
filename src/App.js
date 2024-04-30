@@ -15,6 +15,7 @@ import { Commerce } from "./students/Commerce";
 import { Science } from "./students/Science";
 import { HomeDetail } from "./students/HomeDetail";
 import { FormHandling1 } from "./forms/FormHandling1";
+import { FormHandling2 } from "./forms/FormHandling2";
 
 function App() {
   var title = "REACT APP";
@@ -34,6 +35,7 @@ function App() {
         <Route path="/science" element={<Science />}></Route>
         <Route path = "/home/detail/:id" element = {<HomeDetail/>}></Route>
         <Route path = "/formdemo1" element = {<FormHandling1/>}></Route>
+        <Route path = "/formdemo2" element = {<FormHandling2/>}></Route>
         {/* :id is wild card */}
       </Routes>
     </div>

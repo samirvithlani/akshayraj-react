@@ -67,3 +67,8 @@ forms -->folder --> component FormHandling1
 
 routes register
 navbar link
+
+
+{required:{value:true,message:"Email is required*"}}
+
+{required:{value:true,message:"Email is required*"}}

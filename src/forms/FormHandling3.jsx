@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
 export const FormHandling3 = () => {
+  const [total, settotal] = useState(9)
   const { register, handleSubmit,formState:{errors} } = useForm({mode:"all",
   defaultValues:{name:"XYZ",age:"18",color:"#FFC0CB",dob:new Date().toISOString().substr(0,10)}}
   );
@@ -68,6 +69,12 @@ export const FormHandling3 = () => {
             <input type="submit" value="submit"></input>
           </div>
         </form>
+        {
+  total > 70 ? <p style={{color:'blue'}}>{total}</p> :
+  (total > 60 && total < 70) ? <p style={{color:"green"}}>{total}</p> :
+  <p>null</p>
+}
+
       </div>
     </div>
   );

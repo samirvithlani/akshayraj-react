@@ -72,3 +72,51 @@ navbar link
 {required:{value:true,message:"Email is required*"}}
 
 {required:{value:true,message:"Email is required*"}}
+
+
+API CALLING...
+
+React js --> frontend library
+
+API --> Application Programming Interface :
+
+zomato --> uber --> ola ---> google maps --->
+
+URL --> map -->data ---> application --> Display
+
+API ---> Data[JSON]
+
+GET : Fetch data from server
+POST: Andorid form --> java --> data send to server
+PUT : Update data
+DELETE : Delete data
+
+
+Amazone:
+Team -> Frontend -> Backend -> Database
+x react  / Andorid / angular / vue
+y -->database / Backend
+
+
+UserRegiseter -->
+react --> form ---> userData --> 
+API = www.abc.com/api/register --> POST[Data]
+
+      API
+
+Database -->
+backend -- >API --> www.abc.com/api/register --> POST
+
+package --> axios
+
+
+
+
+
+
+
+
+
+
+
+

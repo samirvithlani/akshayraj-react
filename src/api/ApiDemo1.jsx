@@ -1,10 +1,22 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { CutomeLoader } from "../components/CutomeLoader";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export const ApiDemo1 = () => {
+
+  useEffect(() => {
+    
+    getApiDemo1();
+    
+  }, [])
+  
+
+
+
+
+
   const [users, setusers] = useState([]);
   const [isLoading, setisLoading] = useState(false);
   const getApiDemo1 = async () => {
@@ -55,13 +67,13 @@ export const ApiDemo1 = () => {
         theme="dark"
       />
       <h1>API DEMO 1</h1>
-      <button
+      {/* <button
         onClick={() => {
           getApiDemo1();
         }}
       >
         GET
-      </button>
+      </button> */}
       {isLoading && <CutomeLoader />}
       <table className="table table-dark">
         <thead>

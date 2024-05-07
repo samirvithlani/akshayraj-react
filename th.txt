@@ -110,6 +110,16 @@ backend -- >API --> www.abc.com/api/register --> POST
 package --> axios
 
 
+useEffect: it is a hook which is used to perform side effects in functional component
+
+side effect:
+
+chat application : message type [send] --->
+    replay --> 
+      display : message
+      
+
+
 
 
 

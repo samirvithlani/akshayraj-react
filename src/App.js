@@ -19,6 +19,8 @@ import { FormHandling2 } from "./forms/FormHandling2";
 import { FormHandling3 } from "./forms/FormHandling3";
 import { ApiDemo1 } from "./api/ApiDemo1";
 import { UseEffectDemo } from "./components/UseEffectDemo";
+import { ApiDemo3 } from "./api/ApiDemo3";
+import { ApiDemo4 } from "./api/ApiDemo4";
 
 function App() {
   var title = "REACT APP";
@@ -42,6 +44,8 @@ function App() {
         <Route path = "/formdemo3" element = {<FormHandling3/>}></Route>
         <Route path = "/useeeffectdemo" element = {<UseEffectDemo/>}></Route>
         <Route path = "/apidemo1" element = {<ApiDemo1/>}></Route>
+        <Route path = "/apidemo3" element = {<ApiDemo3/>}></Route>
+        <Route path = "/apidemo4" element = {<ApiDemo4/>}></Route>
 
         {/* :id is wild card */}
       </Routes>

@@ -21,6 +21,7 @@ import { ApiDemo1 } from "./api/ApiDemo1";
 import { UseEffectDemo } from "./components/UseEffectDemo";
 import { ApiDemo3 } from "./api/ApiDemo3";
 import { ApiDemo4 } from "./api/ApiDemo4";
+import { UserDetail } from "./api/UserDetail";
 
 function App() {
   var title = "REACT APP";
@@ -46,6 +47,7 @@ function App() {
         <Route path = "/apidemo1" element = {<ApiDemo1/>}></Route>
         <Route path = "/apidemo3" element = {<ApiDemo3/>}></Route>
         <Route path = "/apidemo4" element = {<ApiDemo4/>}></Route>
+        <Route path = "/userdetail/:id" element = {<UserDetail/>}></Route>
 
         {/* :id is wild card */}
       </Routes>

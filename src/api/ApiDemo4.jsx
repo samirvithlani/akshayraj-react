@@ -59,13 +59,15 @@ export const ApiDemo4 = () => {
         theme="dark"
       />
       <h1>API DEMO 4</h1>
-      <button
+      {/* <button
         onClick={() => {
           postUser();
         }}
       >
         POST USER
-      </button>
+      </button> */}
+
+      
     </div>
   );
 };

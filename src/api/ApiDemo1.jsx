@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { CutomeLoader } from "../components/CutomeLoader";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Link } from "react-router-dom";
 
 export const ApiDemo1 = () => {
 
@@ -19,6 +20,7 @@ export const ApiDemo1 = () => {
 
   const [users, setusers] = useState([]);
   const [isLoading, setisLoading] = useState(false);
+
   const getApiDemo1 = async () => {
     //api -->data
     setisLoading(true);
@@ -52,6 +54,21 @@ export const ApiDemo1 = () => {
     }
   };
 
+  const handleSearch = async (e) => {
+
+    console.log("e.target.value", e.target.value);
+
+    const res = await axios.get("https://node5.onrender.com/user/filter",{
+      params:{
+        name:e.target.value
+      }
+    });
+    console.log("res", res);
+    //rahul
+    setusers(res.data.data);
+
+  }
+
   return (
     <div>
       <ToastContainer
@@ -75,6 +92,8 @@ export const ApiDemo1 = () => {
         GET
       </button> */}
       {isLoading && <CutomeLoader />}
+      <input type="text" onChange={(e)=>{handleSearch(e)}} placeholder="Search User..."></input>
+
       <table className="table table-dark">
         <thead>
           <tr>
@@ -104,6 +123,7 @@ export const ApiDemo1 = () => {
                   >
                     Delete
                   </button>
+                  <Link to = {`/userdetail/${user._id}`} className = "btn btn-success">Detail</Link>
                 </td>
               </tr>
             );

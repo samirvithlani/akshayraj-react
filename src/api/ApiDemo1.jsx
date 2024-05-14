@@ -124,6 +124,7 @@ export const ApiDemo1 = () => {
                     Delete
                   </button>
                   <Link to = {`/userdetail/${user._id}`} className = "btn btn-success">Detail</Link>
+                  <Link to ={`/userupdate/${user._id}`} className = "btn btn-primary">Update</Link>
                 </td>
               </tr>
             );

@@ -73,6 +73,13 @@ export const Navbar = () => {
               useeeffectdemo
             </Link>
           </li>
+          
+          <li class="nav-item">
+            <Link class="nav-link" to="/storagedemo">
+              StorageDemo
+            </Link>
+          </li>
+          
         </ul>
       </div>
     </nav>

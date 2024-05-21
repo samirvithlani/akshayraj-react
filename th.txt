@@ -117,6 +117,10 @@ side effect:
 chat application : message type [send] --->
     replay --> 
       display : message
+
+
+context: 
+it used to pass data from parent to child component without passing props
       
 
 

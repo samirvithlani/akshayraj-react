@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { ThemeContext } from "./Context";
 
 export const Navbar = () => {
+
+  const {mode} = useContext(ThemeContext)
+  console.log("mode...",mode)
   return (
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="#">

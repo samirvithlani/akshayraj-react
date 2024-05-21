@@ -24,6 +24,8 @@ import { ApiDemo4 } from "./api/ApiDemo4";
 import { UserDetail } from "./api/UserDetail";
 import { UpdateUser } from "./api/UpdateUser";
 import { StorageDemo } from "./components/StorageDemo";
+import { createContext } from "react";
+import { ThemeContext } from "./Context";
 
 function App() {
   var title = "REACT APP";
@@ -34,27 +36,31 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
-      <Routes>
-        <Route path="/students" element={<Students />}></Route>
-        <Route path="/blogs" element={<Blogs />}></Route>
-        <Route path="/home" element={<Home />}></Route>
-        <Route path="/students/commerce" element={<Commerce />}></Route>
-        <Route path="/science" element={<Science />}></Route>
-        <Route path = "/home/detail/:id" element = {<HomeDetail/>}></Route>
-        <Route path = "/formdemo1" element = {<FormHandling1/>}></Route>
-        <Route path = "/formdemo2" element = {<FormHandling2/>}></Route>
-        <Route path = "/formdemo3" element = {<FormHandling3/>}></Route>
-        <Route path = "/useeeffectdemo" element = {<UseEffectDemo/>}></Route>
-        <Route path = "/apidemo1" element = {<ApiDemo1/>}></Route>
-        <Route path = "/apidemo3" element = {<ApiDemo3/>}></Route>
-        <Route path = "/apidemo4" element = {<ApiDemo4/>}></Route>
-        <Route path = "/userdetail/:id" element = {<UserDetail/>}></Route>
-        <Route path = "/userupdate/:id" element = {<UpdateUser/>}></Route>
-        <Route path = "/storagedemo" element = {<StorageDemo/>}></Route>
+      <ThemeContext.Provider value={{ mode: "light" }}>
+        <Navbar />
+      </ThemeContext.Provider>
+      <ThemeContext.Provider value={{ mode: "light",xyz :100 }}>
+        <Routes>
+          <Route path="/students" element={<Students />}></Route>
+          <Route path="/blogs" element={<Blogs />}></Route>
+          <Route path="/home" element={<Home />}></Route>
+          <Route path="/students/commerce" element={<Commerce />}></Route>
+          <Route path="/science" element={<Science />}></Route>
+          <Route path="/home/detail/:id" element={<HomeDetail />}></Route>
+          <Route path="/formdemo1" element={<FormHandling1 />}></Route>
+          <Route path="/formdemo2" element={<FormHandling2 />}></Route>
+          <Route path="/formdemo3" element={<FormHandling3 />}></Route>
+          <Route path="/useeeffectdemo" element={<UseEffectDemo />}></Route>
+          <Route path="/apidemo1" element={<ApiDemo1 />}></Route>
+          <Route path="/apidemo3" element={<ApiDemo3 />}></Route>
+          <Route path="/apidemo4" element={<ApiDemo4 />}></Route>
+          <Route path="/userdetail/:id" element={<UserDetail />}></Route>
+          <Route path="/userupdate/:id" element={<UpdateUser />}></Route>
+          <Route path="/storagedemo" element={<StorageDemo />}></Route>
 
-        {/* :id is wild card */}
-      </Routes>
+          {/* :id is wild card */}
+        </Routes>
+      </ThemeContext.Provider>
     </div>
   );
 }

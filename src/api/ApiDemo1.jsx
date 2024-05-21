@@ -1,15 +1,21 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { CutomeLoader } from "../components/CutomeLoader";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
+import { ThemeContext } from "../Context";
 
 export const ApiDemo1 = () => {
+  const {mode,xyz} = useContext(ThemeContext);
+  
+  console.log("mode", mode);
+  console.log("xyz", xyz);
 
   useEffect(() => {
     
     getApiDemo1();
+    mode == "dark" ? document.body.style.backgroundColor = "black" : document.body.style.backgroundColor = "white";
     
   }, [])
   

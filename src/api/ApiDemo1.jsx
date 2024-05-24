@@ -5,6 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
 import { ThemeContext } from "../Context";
+import { MyButton } from "../components/MyButton";
 
 export const ApiDemo1 = () => {
   const {mode,xyz} = useContext(ThemeContext);
@@ -121,6 +122,7 @@ export const ApiDemo1 = () => {
                 <td>{user.age}</td>
                 <td>{user.isActive == true ? "Active" : "Not Active"}</td>
                 <td>
+                  <MyButton></MyButton>
                   <button
                     onClick={() => {
                       deleteUser(user._id);

@@ -17,7 +17,7 @@ export const ProdComp = () => {
                 <h3>IPHONE 14</h3>
                 <p>Price: $1400</p>
                 
-                <button onClick={()=>{dispatch(addToCart({name:"iphone15",price:1500}))}}>Add to Cart</button>  
+                <button onClick={()=>{dispatch(addToCart({name:"iphone16",price:1200}))}}>Add to Cart</button>  
 
         </div>
     </div>

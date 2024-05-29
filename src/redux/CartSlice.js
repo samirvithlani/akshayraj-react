@@ -12,6 +12,9 @@ const cartSlice = createSlice({
             console.log("action",action)
             console.log("state...",state)
             state.products.push(action.payload)
+            //action will have type,and payload
+            //type: cart/addToCart
+            //payload:object
         }
     }
 

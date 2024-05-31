@@ -28,6 +28,7 @@ import { createContext } from "react";
 import { ThemeContext } from "./Context";
 import { DepedentDropdown } from "./components/DepedentDropdown";
 import { ProdComp } from "./components/ProdComp";
+import { BankComponent } from "./components/BankComponent";
 
 function App() {
   var title = "REACT APP";
@@ -61,6 +62,7 @@ function App() {
           <Route path="/storagedemo" element={<StorageDemo />}></Route>
           <Route path = "/depdropdown" element = {<DepedentDropdown/>}></Route>
           <Route path = "/prodcomp" element = {<ProdComp/>}></Route>
+          <Route path ="/bankcomp" element = {<BankComponent/>}></Route>
 
 
           {/* :id is wild card */}

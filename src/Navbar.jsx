@@ -9,6 +9,7 @@ export const Navbar = () => {
   console.log("mode...",mode)
 
   const state = useSelector((state)=>state.cart.products)
+  const bankState = useSelector((state)=>state.bank.amount)
   console.log("state...",state)
 
 
@@ -97,11 +98,17 @@ export const Navbar = () => {
           </li>
           
           <li class="nav-item">
+            <Link class="nav-link" to="/bankcomp">
+            bankcomp
+            </Link>
+            <p style={{color:"white"}}>amount ={bankState} </p>
+          </li>
+          <li class="nav-item">
             <Link class="nav-link" to="/prodcomp">
             prodcomp
             </Link>
           </li>
-          <li style={{color:"red"}}>
+          <li style={{color:"redh"}}>
               {
                 state?.length
               }

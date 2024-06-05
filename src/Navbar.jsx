@@ -108,6 +108,12 @@ export const Navbar = () => {
             prodcomp
             </Link>
           </li>
+          
+          <li class="nav-item">
+            <Link class="nav-link" to="/muibutton">
+            muibutton
+            </Link>
+          </li>
           <li style={{color:"redh"}}>
               {
                 state?.length

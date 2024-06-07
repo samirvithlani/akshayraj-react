@@ -110,6 +110,12 @@ export const Navbar = () => {
           </li>
           
           <li class="nav-item">
+            <Link class="nav-link" to="/contentComp">
+            contentComp
+            </Link>
+          </li>
+          
+          <li class="nav-item">
             <Link class="nav-link" to="/muibutton">
             muibutton
             </Link>

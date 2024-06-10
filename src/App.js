@@ -31,6 +31,8 @@ import { ProdComp } from "./components/ProdComp";
 import { BankComponent } from "./components/BankComponent";
 import { ButtonDemo } from "./mui/ButtonDemo";
 import { ContentComponnet } from "./components/ContentComponnet";
+import { ChartDemo } from "./components/ChartDemo";
+import { DashbboardDemo } from "./mui/DashbboardDemo";
 
 function App() {
   var title = "REACT APP";
@@ -67,6 +69,8 @@ function App() {
           <Route path ="/bankcomp" element = {<BankComponent/>}></Route>
           <Route path ="/muibutton" element = {<ButtonDemo/>}></Route>
           <Route path = "/contentComp" element = {<ContentComponnet/>}></Route>
+          <Route path ="/chartdemo" element = {<ChartDemo/>}></Route>
+          <Route path = "/dashboardDemo" element = {<DashbboardDemo/>}></Route>
 
 
           {/* :id is wild card */}

@@ -134,7 +134,16 @@ dispatch
 
 
 
+component chartComponent :--> type : data
 
+props
+
+pie
+bar
+line
+doughnut
+
+switch case...
 
 
 

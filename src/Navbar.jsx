@@ -42,7 +42,7 @@ export const Navbar = () => {
               blogs
             </Link>
           </li>
-          <li class="nav-item">
+          {/* <li class="nav-item">
             <Link class="nav-link" to="/students">
               Students
             </Link>
@@ -76,6 +76,17 @@ export const Navbar = () => {
           <li class="nav-item">
             <Link class="nav-link" to="/apidemo4">
               API DEMO 4
+            </Link>
+          </li> */}
+          <li class="nav-item">
+            <Link class="nav-link" to="/chartdemo">
+              CHART DEMO 1
+            </Link>
+          </li>
+          
+          <li class="nav-item">
+            <Link class="nav-link" to="/dashboardDemo">
+            dashboardDemo
             </Link>
           </li>
 

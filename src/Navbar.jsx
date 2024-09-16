@@ -89,6 +89,11 @@ export const Navbar = () => {
             dashboardDemo
             </Link>
           </li>
+          <li class="nav-item">
+            <Link class="nav-link" to="/login">
+            login
+            </Link>
+          </li>
 
           <li class="nav-item">
             <Link class="nav-link" to="/useeeffectdemo">

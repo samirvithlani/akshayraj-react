@@ -6,6 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
 import { ThemeContext } from "../Context";
 import { MyButton } from "../components/MyButton";
+import Cookies from 'js-cookie';
 
 export const ApiDemo1 = () => {
   const {mode,xyz} = useContext(ThemeContext);
@@ -31,12 +32,28 @@ export const ApiDemo1 = () => {
   const getApiDemo1 = async () => {
     //api -->data
     setisLoading(true);
-    const res = await axios.get("https://node5.onrender.com/user/user");
+    try{
+    //const res = await axios.get("https://node5.onrender.com/user/user");
+    console.log("Cookies.get('token')", Cookies.get('token'));
+    var token = Cookies.get('token');
+    token = "Bearer " + token;
+    console.log("token", token);
+
+    const res = await axios.get("http://localhost:3000/user/user",{
+      headers:{
+        Authorization:token
+      }
+    });
     console.log("res", res);
     console.log("res.data.message", res.data.message);
     console.log("res.data.data", res.data.data);
     setusers(res.data.data);
     setisLoading(false);
+    }catch(err){
+      console.log("err", err);
+      setisLoading(false);
+    }
+    
   };
 
   const deleteUser = async (id) => {

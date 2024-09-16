@@ -33,6 +33,7 @@ import { ButtonDemo } from "./mui/ButtonDemo";
 import { ContentComponnet } from "./components/ContentComponnet";
 import { ChartDemo } from "./components/ChartDemo";
 import { DashbboardDemo } from "./mui/DashbboardDemo";
+import { Login } from "./components/Login";
 
 function App() {
   var title = "REACT APP";
@@ -46,7 +47,7 @@ function App() {
       <ThemeContext.Provider value={{ mode: "light" }}>
         <Navbar />
       </ThemeContext.Provider>
-      <ThemeContext.Provider value={{ mode: "light",xyz :100 }}>
+      <ThemeContext.Provider value={{ mode: "light", xyz: 100 }}>
         <Routes>
           <Route path="/students" element={<Students />}></Route>
           <Route path="/blogs" element={<Blogs />}></Route>
@@ -64,14 +65,14 @@ function App() {
           <Route path="/userdetail/:id" element={<UserDetail />}></Route>
           <Route path="/userupdate/:id" element={<UpdateUser />}></Route>
           <Route path="/storagedemo" element={<StorageDemo />}></Route>
-          <Route path = "/depdropdown" element = {<DepedentDropdown/>}></Route>
-          <Route path = "/prodcomp" element = {<ProdComp/>}></Route>
-          <Route path ="/bankcomp" element = {<BankComponent/>}></Route>
-          <Route path ="/muibutton" element = {<ButtonDemo/>}></Route>
-          <Route path = "/contentComp" element = {<ContentComponnet/>}></Route>
-          <Route path ="/chartdemo" element = {<ChartDemo/>}></Route>
-          <Route path = "/dashboardDemo" element = {<DashbboardDemo/>}></Route>
-
+          <Route path="/depdropdown" element={<DepedentDropdown />}></Route>
+          <Route path="/prodcomp" element={<ProdComp />}></Route>
+          <Route path="/bankcomp" element={<BankComponent />}></Route>
+          <Route path="/muibutton" element={<ButtonDemo />}></Route>
+          <Route path="/contentComp" element={<ContentComponnet />}></Route>
+          <Route path="/chartdemo" element={<ChartDemo />}></Route>
+          <Route path="/dashboardDemo" element={<DashbboardDemo />}></Route>
+          <Route path="/login" element={<Login />}></Route>
 
           {/* :id is wild card */}
         </Routes>
